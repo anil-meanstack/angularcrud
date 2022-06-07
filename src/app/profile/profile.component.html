@@ -1,0 +1,23 @@
+
+<app-nevbar></app-nevbar>
+<div class="container">
+    <form [formGroup]="userdata" class="row g-3" (ngSubmit)="updateUser()">
+        <div class="container">
+            <div class="form-group">
+
+                <div *ngIf="show" class="mt-3 alert alert-success" role="alert">
+                   User updated! 
+                </div>
+                {{show}}
+                <label>Name</label>
+                <input type="text" class="form-control" formControlName="name" placeholder="Enter Name">
+                <div class="text-danger" *ngIf="input['name'].touched && input['name'].invalid">
+                    <div *ngIf="input['name']?.errors?.['required']">Enter Name</div>
+                </div>
+            </div>  
+
+            <button class=" mt-2 btn btn-primary" routerLinkActive="active" type="submit">Update</button>
+
+        </div>
+    </form>
+</div>

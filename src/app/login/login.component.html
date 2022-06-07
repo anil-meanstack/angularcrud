@@ -1,0 +1,45 @@
+<body class="login_bg">
+    <div class="container">
+        <img class="logo" src="./assets/VexFitness.png">
+        <div class="col-md-12 d-flex justify-content-center mt-5">
+            <div style="" class="col-3">
+                <h2 style="color:white;">MEMBER LOG IN</h2>
+                <form [formGroup]="data" (ngSubmit)="datafunctuion()">
+                    <div class="form-inline text-center">
+                        <div class="form-group">
+                            <label>E-mail</label>
+                            <input type="text" class="form-control" formControlName="email" placeholder="Enter Email">
+                            <div class="text-danger"
+                                *ngIf="(input['email'].touched && input['email'].invalid) || Issubmited">
+                                <div *ngIf="input['email']?.errors?.['required']">Enter Email</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" class="form-control" formControlName="password"
+                                placeholder="Enter Password">
+                            <div class="text-danger"
+                                *ngIf="(input['password'].touched && input['password'].invalid) || Issubmited">
+                                <div *ngIf="input['password']?.errors?.['required']">Enter Password</div>
+                                <div *ngIf="input['password']?.errors?.['minlength']">Enter minimum 8 char.</div>
+                            </div>
+
+                        </div>
+                        <div class="form-f">
+                            <a href="">Forgot Password</a>
+                        </div>
+
+                        <button routerLinkActive="active" type="submit" class="button">Login</button>
+                    </div><br>
+                    <div class="">
+                       <p style="color: white"> 
+                            Not a member?
+                        <a routerLink="/register">Register</a>
+                    </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>

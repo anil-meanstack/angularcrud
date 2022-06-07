@@ -1,1 +1,76 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+
+.img{   
+    background-image: url(./assets/gym.jpg) ;
+    background-repeat:no-repeat;
+    background-size: cover;
+    /* Full height */
+  height: 100vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+ text-align: center;  
+} 
+
+
+.login_bg{
+    background-image: url(./assets/gym2.jpg);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 100vh;
+
+
+
+    /* Center and scale the image nicely */
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+
+}
+
+.logo {
+    width: 180px;
+    padding-top: 60px;
+
+}
+
+label {
+    color: white;
+    text-align: left;
+    margin-top: 10%;
+    margin: 5%;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-f {
+    text-align: right;
+    color: aliceblue;
+    margin-top: 12px;
+}
+
+a {
+    color: aliceblue;
+}
+
+.button {
+    width: 92%;
+    height: 40px;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 20px;
+    margin-top: 15px;
+}
+table{
+    border: black;
+    
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

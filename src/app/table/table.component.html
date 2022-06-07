@@ -1,0 +1,31 @@
+<app-nevbar></app-nevbar>
+<div class="button1">
+    <button type="button" onclick="user" class="btn btn-primary" (click)="rdToClick()" >Add</button>
+</div>
+<div class="container">
+    <table class="table table-bordered  table-dark">
+
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Address</th>
+                <th scope="col">Country</th>
+                <th scope="col">Age</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let users of PROPERTY_OF_CLASS">
+                <td> {{users._id}}</td>
+                <td> {{users.name}}</td>
+                <td> {{users.email}}</td>
+                <td> {{users.address}}</td>
+                <td> {{users.Country}}</td>
+                <td> {{users.age}}</td>
+                <td><button (click)="update(users._id)"> Edit</button> | <button  (click)="deleteUser(users._id)" >Delete</button></td> 
+            </tr>
+        </tbody>
+    </table>
+</div>

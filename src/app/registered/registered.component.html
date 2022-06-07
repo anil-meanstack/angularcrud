@@ -1,0 +1,42 @@
+<div class="img">
+    <div class="container">
+        <img class="logo" src="./assets/VexFitness.png">
+        <div class="col-md-12 d-flex justify-content-center mt-5">
+            <div style="" class="col-3">
+                <h2 style="color:white;">MEMBER REGISTER</h2>
+                <form [formGroup]="data" (ngSubmit)="datafunctuion()">
+                    <div class="form-inline text-center">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control" formControlName="name" placeholder="Enter Name">
+                             <div class="text-danger" *ngIf="input['name'].touched && input['name'].invalid">
+                                <div *ngIf="input['name']?.errors?.['required']">Enter Name</div>
+                            </div> 
+                        </div>      
+                        <div class="form-group">
+                            <label>E-mail</label>
+                            <input type="text" class="form-control" formControlName="email" placeholder="Enter Email">
+                            <div class="text-danger" *ngIf="input['email'].touched && input['email'].invalid">
+                                <div *ngIf="input['email']?.errors?.['required']">Enter Email</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" class="form-control" formControlName="password"
+                                placeholder="Enter Password">
+                            <div class="text-danger" *ngIf="input['password'].touched && input['password'].invalid">
+                                <div *ngIf="input['password']?.errors?.['required']">Enter Password</div>
+                            </div>
+                        </div>
+                        <div class="form-f">
+                            <a href="">Forgot Password</a>
+                        </div>
+
+                        <button class="button">Registered</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
